@@ -554,4 +554,36 @@ video {
   --tw-contain-style:  ;
 }
 
+.scroller {
+  /* max-width: 600px; */
+  overflow: hidden;
+  position: relative;
+}
 
+.scroller__inner {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.scroller[data-animated="true"] {
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller--right {
+  --animation-direction: reverse;
+}
+
+.scroller--left {
+  --animation-direction: forwards;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
