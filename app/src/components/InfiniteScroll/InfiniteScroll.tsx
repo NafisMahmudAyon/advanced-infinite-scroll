@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect } from "react";
-import "./scroll.css";
+// import "./scroll.css";
 
 interface ScrollerProps {
   className?: string;

@@ -1,5 +1,4 @@
 import React from "react";
-import "./scroll.css";
 interface InfiniteScrollProps {
     className?: string;
     direction?: "left" | "right";
